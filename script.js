@@ -28,15 +28,21 @@ todoform.addEventListener('submit',(event)=>{
   const div=document.createElement("div");
   const checkbox=document.createElement('input');
   checkbox.type='checkbox';
-  checkbox.checked=data.completed;
+  checkbox.checked=data.completed; //true
   checkbox.classList.add('form-check-input','me-2');
   checkbox.addEventListener('change',(event)=>{
-
+    event.preventDefault();
+    data.completed=event.target.checked;
+    displaylist();
+  
+  
   })
+
 
   const span=document.createElement('span');
   span.innerText=data.name;
   span.classList.add('ms-3');
+  span.style.textDecoration = data.completed ? 'line-throgh' : 'none';
 
   
   div.append(checkbox);
