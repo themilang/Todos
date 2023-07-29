@@ -44,10 +44,25 @@ todoform.addEventListener('submit',(event)=>{
   span.classList.add('ms-3');
   span.style.textDecoration = data.completed ? 'line-through ' : 'none';
 
-  
   div.append(checkbox);
   div.append(span);
   li.append(div);
+
+ //edit button
+ const editButton=document.createElement('button');
+ editButton.classList.add('btn','btn-secondary');
+
+ editButton.innerText='Edit'
+ //delete button
+const deleteButton=document.createElement('button');
+deleteButton.classList.add('btn','btn-danger');
+deleteButton.innerText='Delete';
+
+  
+ 
+  li.append(editButton);
+  li.append(deleteButton);
+  
   todolist.append(li);
 
 
