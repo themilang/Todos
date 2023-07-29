@@ -65,6 +65,11 @@ todoform.addEventListener('submit',(event)=>{
  editButton.innerText='Edit';
  editButton.setAttribute('data-bs-toggle','modal');
  editButton.setAttribute('data-bs-target','#editmodal');
+ editButton.addEventListener('click',(event=>{
+  event.preventDefault();
+  document.getElementById('form-edit').value=data.name;
+
+ }))
 
 
 
