@@ -42,7 +42,7 @@ todoform.addEventListener('submit',(event)=>{
   const span=document.createElement('span');
   span.innerText=data.name;
   span.classList.add('ms-3');
-  span.style.textDecoration = data.completed ? 'line-throgh' : 'none';
+  span.style.textDecoration = data.completed ? 'line-through ' : 'none';
 
   
   div.append(checkbox);
