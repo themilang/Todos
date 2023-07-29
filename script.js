@@ -24,7 +24,7 @@ todoform.addEventListener('submit',(event)=>{
   todolist.innerHTML='';
   arr1.forEach((data)=>{
   const li=document.createElement('li');
-  li.classList.add('list-group-item');//creating the list group items in nicer way
+  li.classList.add('list-group-item','d-flex','justify-content-between');//creating the list group items in nicer way
   const div=document.createElement("div");
   const checkbox=document.createElement('input');
   checkbox.type='checkbox';
@@ -48,21 +48,29 @@ todoform.addEventListener('submit',(event)=>{
   div.append(span);
   li.append(div);
 
+
+
+
+  //create a div for edit and delete button 
+
+  const btndiv=document.createElement('div');
+
+
+
+
  //edit button
  const editButton=document.createElement('button');
- editButton.classList.add('btn','btn-secondary');
+ editButton.classList.add('btn','btn-secondary','btn-sm');
 
  editButton.innerText='Edit'
+ btndiv.append(editButton);
  //delete button
 const deleteButton=document.createElement('button');
-deleteButton.classList.add('btn','btn-danger');
+deleteButton.classList.add('btn','btn-danger','btn-sm','ms-2');
 deleteButton.innerText='Delete';
 
-  
- 
-  li.append(editButton);
-  li.append(deleteButton);
-  
+  btndiv.append(deleteButton);
+  li.append(btndiv);
   todolist.append(li);
 
 
