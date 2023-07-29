@@ -4,6 +4,7 @@ const todolist=document.querySelector('#todo-list')
 
 
 let arr1=[];
+let todoeditdata;
 
 todoform.addEventListener('submit',(event)=>{
   event.preventDefault();
@@ -68,6 +69,7 @@ todoform.addEventListener('submit',(event)=>{
  editButton.addEventListener('click',(event=>{
   event.preventDefault();
   document.getElementById('form-edit').value=data.name;
+  todoeditdata=data.id;
 
 
 //to acess the id of the data that is to be edit inside the modal it requires a 
@@ -125,5 +127,15 @@ displaylist();
 }
 const editHandler=(event)=>{
   event.preventDefault();
-  console.log(document.getElementById('form-edit').value);
+  // console.log(document.getElementById('form-edit').value);
+  // console.log(todoeditdata)
+  arr1=arr1.map((value)=>{
+    return value.id===Number(todoeditdata)? {
+      id:Number(todoeditdata),
+      name:document.getElementById('form-edit').value,
+      completed:false
+    }:value;
+  })
+  displaylist();
+  document.getElementById('btn-close').click();
 }
