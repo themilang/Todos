@@ -69,6 +69,25 @@ const deleteButton=document.createElement('button');
 deleteButton.classList.add('btn','btn-danger','btn-sm','ms-2');
 deleteButton.innerText='Delete';
 
+//usi
+deleteButton.addEventListener('click',(event)=>{
+  event.preventDefault();
+
+ arr1 = arr1.filter((value)=>{
+    return value.id !== data.id;
+ })
+displaylist();
+})
+
+
+
+
+
+
+
+
+
+
   btndiv.append(deleteButton);
   li.append(btndiv);
   todolist.append(li);
