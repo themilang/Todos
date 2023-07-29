@@ -69,6 +69,18 @@ todoform.addEventListener('submit',(event)=>{
   event.preventDefault();
   document.getElementById('form-edit').value=data.name;
 
+
+//to acess the id of the data that is to be edit inside the modal it requires a 
+// another input where we can get the id keeping the input type hidden
+// and acessing by get element by id
+ 
+
+//we also can use the local storage and session or cookie for this
+
+
+  localStorage.setItem('dataid',data.id);
+  sessionStorage.setItem('dataid',data.id);
+
  }))
 
 
@@ -105,5 +117,13 @@ displaylist();
 
 
 })
+
+
+
+
   
+}
+const editHandler=(event)=>{
+  event.preventDefault();
+  console.log(document.getElementById('form-edit').value);
 }
