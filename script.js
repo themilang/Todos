@@ -60,9 +60,15 @@ todoform.addEventListener('submit',(event)=>{
 
  //edit button
  const editButton=document.createElement('button');
- editButton.classList.add('btn','btn-secondary','btn-sm');
+ editButton.classList.add('btn','btn-secondary','btn-sm','me-2');
 
- editButton.innerText='Edit'
+ editButton.innerText='Edit';
+ editButton.setAttribute('data-bs-toggle','modal');
+ editButton.setAttribute('data-bs-target','#editmodal');
+
+
+
+
  btndiv.append(editButton);
  //delete button
 const deleteButton=document.createElement('button');
