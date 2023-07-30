@@ -1,6 +1,22 @@
 const todoform=document.querySelector("#todo-form")
 const todoinput=document.querySelector('#form-input')
 const todolist=document.querySelector('#todo-list')
+// const menu=document.querySelector('#menu')
+
+
+
+// menu.setAttribute('data-bs-toggle','collapse');
+// menu.setAttribute('data-bs-target','#navbarNavDropdown');
+// // menu.setAttribute('aria-controls','navbarNavDropdown');
+// // menu.setAttribute('aria-expanded','false')
+// // menu.addEventListener('click',(event)=>{
+// //   event.preventDefault();
+
+// // // document.getElementById("#")
+
+// // })
+
+
 
 
 let arr1=[];
@@ -139,3 +155,6 @@ const editHandler=(event)=>{
   displaylist();
   document.getElementById('btn-close').click();
 }
+
+
+
